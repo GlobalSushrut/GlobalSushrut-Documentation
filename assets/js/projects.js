@@ -1,197 +1,167 @@
-// This file will be populated by the build script with project information
-const projects = [];
-projects.push({
-    name: 'physics-engine-docs',
-    description: 'Documentation for Physics Engine with Advanced Simulation Capabilities',
-    path: 'projects/physics-engine-docs/'
-});
-projects.push({
-    name: 'DGLA-governance-pipeline',
-    description: 'A production-grade data governance and lineage tracking system with cryptographic proofs',
-    path: 'projects/DGLA-governance-pipeline/'
-});
-projects.push({
-    name: 'jcachenetdl',
-    description: 'No description available.',
-    path: 'projects/jcachenetdl/'
-});
-projects.push({
-    name: 'bidding-app',
-    description: 'No description available.',
-    path: 'projects/bidding-app/'
-});
-projects.push({
-    name: 'wrapper-infrastructure',
-    description: 'A multi-framework frontend infrastructure that generates code from configuration files',
-    path: 'projects/wrapper-infrastructure/'
-});
-projects.push({
-    name: 'entroos',
-    description: 'EntroOS - A decentralized execution platform that fuses OS, container runtime, orchestrator, and blockchain ledger functionality through 70 mathematical governing equations',
-    path: 'projects/entroos/'
-});
-projects.push({
-    name: 'Decentrilised-orchester-system',
-    description: 'It is the advanced 4GENERATION BLOCKCHAIN technology',
-    path: 'projects/Decentrilised-orchester-system/'
-});
-projects.push({
-    name: 'globalsushrut-prelanding',
-    description: 'No description available.',
-    path: 'projects/globalsushrut-prelanding/'
-});
-projects.push({
-    name: 'hologram-space',
-    description: 'No description available.',
-    path: 'projects/hologram-space/'
-});
-projects.push({
-    name: 'backend-integrator',
-    description: 'No description available.',
-    path: 'projects/backend-integrator/'
-});
-projects.push({
-    name: 'AGI-GitHub-Release',
-    description: 'AGI Toolkit with MR-ZKELP dual licensing: free for development, licensed for corporate use',
-    path: 'projects/AGI-GitHub-Release/'
-});
-projects.push({
-    name: 'agi_toolkit',
-    description: 'No description available.',
-    path: 'projects/agi_toolkit/'
-});
-projects.push({
-    name: 'SHA-7EF_RF',
-    description: 'A high-entropy quantum-resistant cryptographic hash function that uses chaos-based transformations and anti-resonance patterns to achieve optimal avalanche effects and protect against both classical and quantum attacks.',
-    path: 'projects/SHA-7EF_RF/'
-});
-projects.push({
-    name: 'Metaverse_blockchain',
-    description: '"A pioneering quantum-ready metaverse platform that combines quantum computing principles with blockchain technology to create secure, scalable, and immersive decentralized virtual worlds."',
-    path: 'projects/Metaverse_blockchain/'
-});
-projects.push({
-    name: 'Womb-AGI-FRNET-v0.0001',
-    description: 'No description available.',
-    path: 'projects/Womb-AGI-FRNET-v0.0001/'
-});
-projects.push({
-    name: 'ethereum-api-proof',
-    description: 'A production-ready system that bridges off-chain API data with on-chain smart contracts using cryptographic commitments',
-    path: 'projects/ethereum-api-proof/'
-});
-projects.push({
+const projects = [
+  {
     name: 'unrealnet-project',
-    description: 'No description available.',
+    description: 'Documentation for unrealnet-project',
     path: 'projects/unrealnet-project/'
-});
-projects.push({
-    name: 'FactorialGraphDB',
-    description: 'A production-ready, graph-amplified, verifiable database layer built on top of MongoDB',
-    path: 'projects/FactorialGraphDB/'
-});
-projects.push({
-    name: 'decentralized-storage',
-    description: 'No description available.',
-    path: 'projects/decentralized-storage/'
-});
-projects.push({
-    name: 'hospital-management-system-blockchain',
-    description: 'Advanced Hospital Management System with Blockchain Integration',
-    path: 'projects/hospital-management-system-blockchain/'
-});
-projects.push({
-    name: 'rna-splicing-prediction',
-    description: 'RNA Splicing Prediction System with Retrograde Memory Algorithm',
-    path: 'projects/rna-splicing-prediction/'
-});
-projects.push({
-    name: 'UFEC-Q-quantum',
-    description: 'UFEC-Q: Unreal Factorial Error Correction for Photonic Quantum Computing with production-grade features',
-    path: 'projects/UFEC-Q-quantum/'
-});
-projects.push({
-    name: 'secure-financial-data-aggregator',
-    description: 'A production-grade secure financial data transmission system using the Router-Bucket-Middleware architecture with bank-grade security features',
-    path: 'projects/secure-financial-data-aggregator/'
-});
-projects.push({
-    name: 'drug-ACC',
-    description: 'Advanced Clinical Correlations for pharmaceutical data analysis',
-    path: 'projects/drug-ACC/'
-});
-projects.push({
-    name: 'flag-mesh-system',
-    description: 'A production-grade modular feature flagging system with isolated containers, Merkle validation, and configuration locking',
-    path: 'projects/flag-mesh-system/'
-});
-projects.push({
-    name: 'magnetic-nimn-battery-simulation',
-    description: 'No description available.',
-    path: 'projects/magnetic-nimn-battery-simulation/'
-});
-projects.push({
-    name: 'magneto-diodic-chip-simulation',
-    description: 'A comprehensive simulation framework for next-generation spintronics-based processor designed for AI acceleration and quantum cryptographic security.',
-    path: 'projects/magneto-diodic-chip-simulation/'
-});
-projects.push({
-    name: 'mock-mathematics-research',
-    description: 'No description available.',
-    path: 'projects/mock-mathematics-research/'
-});
-projects.push({
-    name: 'recursive-cosmogenesis',
-    description: 'No description available.',
-    path: 'projects/recursive-cosmogenesis/'
-});
-projects.push({
-    name: 'mockgraph-edgenet',
-    description: 'A next-generation search architecture that combines factorial graph weighting, cryptographic verification, and edge computing integration',
-    path: 'projects/mockgraph-edgenet/'
-});
-projects.push({
-    name: 'general-ai-agent',
-    description: 'A General AI Agent with enhanced capabilities that integrates with OpenHands/OpenDevin',
-    path: 'projects/general-ai-agent/'
-});
-projects.push({
-    name: 'metadata-authorship-system',
-    description: 'A production-grade system for detecting AI-generated content based on metadata fingerprinting, cryptographic verification, and machine learning analysis.',
-    path: 'projects/metadata-authorship-system/'
-});
-projects.push({
-    name: 'redise-v2-diagnostic-engine',
-    description: 'RediSe v2 Diagnostic Engine with Redis RAG Training - A sophisticated medical diagnostic system with continuous learning capabilities.',
-    path: 'projects/redise-v2-diagnostic-engine/'
-});
-projects.push({
-    name: 'mmci-pte',
-    description: 'MMCI-PTE: Mock Mechanics Cancer Intelligence - Probability Tensor Engine. A comprehensive cancer diagnostic framework with adaptive consensus intelligence, real-world clinical data processing, and TNM staging.',
-    path: 'projects/mmci-pte/'
-});
-projects.push({
-    name: 'zk-hospital-management-system',
-    description: 'ZK-Proof Based Hospital Management System with secure identity and document management',
-    path: 'projects/zk-hospital-management-system/'
-});
-projects.push({
+  },
+  {
     name: 'AirOmega-Quantum-Framework',
-    description: 'Quantum computing framework with Python and C++ implementations',
+    description: 'Documentation for AirOmega-Quantum-Framework',
     path: 'projects/AirOmega-Quantum-Framework/'
-});
-projects.push({
+  },
+  {
+    name: 'decentralized-storage',
+    description: 'Documentation for decentralized-storage',
+    path: 'projects/decentralized-storage/'
+  },
+  {
+    name: 'recursive-cosmogenesis',
+    description: 'Documentation for recursive-cosmogenesis',
+    path: 'projects/recursive-cosmogenesis/'
+  },
+  {
     name: 'advanced-physics-engine',
-    description: 'An advanced C++ physics engine with perceptual physics capabilities',
+    description: 'Documentation for advanced-physics-engine',
     path: 'projects/advanced-physics-engine/'
-});
-projects.push({
-    name: 'mockphy-engine',
-    description: 'Documentation for MockPhy: Advanced C++ Physics Engine',
-    path: 'projects/mockphy-engine/'
-});
-projects.push({
+  },
+  {
+    name: 'bidding-app',
+    description: 'Documentation for bidding-app',
+    path: 'projects/bidding-app/'
+  },
+  {
+    name: 'AGI-GitHub-Release',
+    description: 'Documentation for AGI-GitHub-Release',
+    path: 'projects/AGI-GitHub-Release/'
+  },
+  {
+    name: 'mock-mathematics-research',
+    description: 'Documentation for mock-mathematics-research',
+    path: 'projects/mock-mathematics-research/'
+  },
+  {
+    name: 'secure-financial-data-aggregator',
+    description: 'Documentation for secure-financial-data-aggregator',
+    path: 'projects/secure-financial-data-aggregator/'
+  },
+  {
+    name: 'magneto-diodic-chip-simulation',
+    description: 'Documentation for magneto-diodic-chip-simulation',
+    path: 'projects/magneto-diodic-chip-simulation/'
+  },
+  {
+    name: 'flag-mesh-system',
+    description: 'Documentation for flag-mesh-system',
+    path: 'projects/flag-mesh-system/'
+  },
+  {
+    name: 'redise-v2-diagnostic-engine',
+    description: 'Documentation for redise-v2-diagnostic-engine',
+    path: 'projects/redise-v2-diagnostic-engine/'
+  },
+  {
+    name: 'general-ai-agent',
+    description: 'Documentation for general-ai-agent',
+    path: 'projects/general-ai-agent/'
+  },
+  {
+    name: 'mockgraph-edgenet',
+    description: 'Documentation for mockgraph-edgenet',
+    path: 'projects/mockgraph-edgenet/'
+  },
+  {
+    name: 'hologram-space',
+    description: 'Documentation for hologram-space',
+    path: 'projects/hologram-space/'
+  },
+  {
+    name: 'DGLA-governance-pipeline',
+    description: 'Documentation for DGLA-governance-pipeline',
+    path: 'projects/DGLA-governance-pipeline/'
+  },
+  {
+    name: 'jcachenetdl',
+    description: 'Documentation for jcachenetdl',
+    path: 'projects/jcachenetdl/'
+  },
+  {
+    name: 'entroos',
+    description: 'Documentation for entroos',
+    path: 'projects/entroos/'
+  },
+  {
+    name: 'physics-engine-docs',
+    description: 'Documentation for physics-engine-docs',
+    path: 'projects/physics-engine-docs/'
+  },
+  {
     name: 'quantum-intent-engine',
-    description: 'Advanced quantum computation simulation platform with accurate state vector modeling and cryptography applications',
+    description: 'Documentation for quantum-intent-engine',
     path: 'projects/quantum-intent-engine/'
-});
+  },
+  {
+    name: 'zk-hospital-management-system',
+    description: 'Documentation for zk-hospital-management-system',
+    path: 'projects/zk-hospital-management-system/'
+  },
+  {
+    name: 'rna-splicing-prediction',
+    description: 'Documentation for rna-splicing-prediction',
+    path: 'projects/rna-splicing-prediction/'
+  },
+  {
+    name: 'metadata-authorship-system',
+    description: 'Documentation for metadata-authorship-system',
+    path: 'projects/metadata-authorship-system/'
+  },
+  {
+    name: 'backend-integrator',
+    description: 'Documentation for backend-integrator',
+    path: 'projects/backend-integrator/'
+  },
+  {
+    name: 'mockphy-engine',
+    description: 'Documentation for mockphy-engine',
+    path: 'projects/mockphy-engine/'
+  },
+  {
+    name: 'hospital-management-system-blockchain',
+    description: 'Documentation for hospital-management-system-blockchain',
+    path: 'projects/hospital-management-system-blockchain/'
+  },
+  {
+    name: 'mmci-pte',
+    description: 'Documentation for mmci-pte',
+    path: 'projects/mmci-pte/'
+  },
+  {
+    name: 'UFEC-Q-quantum',
+    description: 'Documentation for UFEC-Q-quantum',
+    path: 'projects/UFEC-Q-quantum/'
+  },
+  {
+    name: 'Metaverse_blockchain',
+    description: 'Documentation for Metaverse_blockchain',
+    path: 'projects/Metaverse_blockchain/'
+  },
+  {
+    name: 'drug-ACC',
+    description: 'Documentation for drug-ACC',
+    path: 'projects/drug-ACC/'
+  },
+  {
+    name: 'wrapper-infrastructure',
+    description: 'Documentation for wrapper-infrastructure',
+    path: 'projects/wrapper-infrastructure/'
+  },
+  {
+    name: 'Womb-AGI-FRNET-v0.0001',
+    description: 'Documentation for Womb-AGI-FRNET-v0.0001',
+    path: 'projects/Womb-AGI-FRNET-v0.0001/'
+  },
+  {
+    name: 'FactorialGraphDB',
+    description: 'Documentation for FactorialGraphDB',
+    path: 'projects/FactorialGraphDB/'
+  },
+];

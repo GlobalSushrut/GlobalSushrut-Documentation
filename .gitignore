@@ -1,0 +1,13 @@
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules
+node_modules/

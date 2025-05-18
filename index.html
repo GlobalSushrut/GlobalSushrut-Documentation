@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalSushrut Project Documentation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/GlobalSushrut">GitHub</a>
+    </div>
+    
+    <h1>GlobalSushrut Project Documentation</h1>
+    <p>Welcome to the public documentation for GlobalSushrut projects. Select a project below to view its documentation.</p>
+    
+    <div id="projects-container">
+        <!-- Project cards will be dynamically inserted here by JavaScript -->
+    </div>
+    
+    <script>
+        // This will be populated by our build script
+        const projects = [];
+        
+        function createProjectCards() {
+            const container = document.getElementById('projects-container');
+            
+            projects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card';
+                
+                const projectTitle = document.createElement('h2');
+                projectTitle.className = 'project-title';
+                projectTitle.textContent = project.name;
+                
+                const projectDesc = document.createElement('p');
+                projectDesc.textContent = project.description || 'No description available.';
+                
+                const projectLink = document.createElement('a');
+                projectLink.href = project.path;
+                projectLink.textContent = 'View Documentation';
+                
+                projectCard.appendChild(projectTitle);
+                projectCard.appendChild(projectDesc);
+                projectCard.appendChild(projectLink);
+                
+                container.appendChild(projectCard);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', createProjectCards);
+    </script>
+</body>
+</html>

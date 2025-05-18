@@ -1,0 +1,92 @@
+# mock-mathematics-research - README
+
+*This documentation is from the private repository mock-mathematics-research.*
+
+---
+
+# Mock Number Framework Simulations
+
+This collection provides 10 computational simulations that demonstrate the core principles of the Mock Number Framework and related mathematical concepts. Each simulation explores how mathematical structures behave under fluctuating, transitional, and chaotic conditions, bridging the work on Transition Numbers Theory and other advanced mathematical concepts.
+
+## Overview
+
+These simulations present computational implementations of various aspects of Mock Mathematics, showcasing the framework's ability to model systems with:
+- Time-varying parameters
+- Transitional states between classical mathematical structures
+- Probabilistic and chaotic behaviors
+- Emergent mathematical properties
+
+## Installation
+
+To run these simulations, ensure you have the required dependencies installed:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Simulations
+
+### 1. Mock Addition Wave Propagation
+Demonstrates how Mock Addition creates wave interference patterns through the combination of oscillatory components, showing how the sum `(a_mock + b_mock)` produces emergent wave behaviors that classical addition cannot model.
+
+### 2. Mock Multiplication Field Distortion
+Explores how Mock Multiplication with chaotic fluctuations creates non-deterministic growth patterns, displaying a field of possible product values that evolves over time.
+
+### 3. Mock Exponential Bifurcation
+Applies Mock Numbers to the logistic map, demonstrating how systems can transition between stable, periodic, and chaotic regimes as parameters fluctuate over time.
+
+### 4. Mock Derivative Phase Transition
+Investigates how Mock Calculus captures emergence of new mathematical behaviors, with derivative structures that evolve and introduce new critical points over time.
+
+### 5. Mock Prime Distribution
+Redefines primality as a probabilistic property, where numbers can exist in superpositions of prime and composite states, transitioning between these states over time.
+
+### 6. Mock Trigonometric Resonance
+Models harmonic systems with time-varying resonance structures, where the Mock Sine function develops emergent harmonics that classical trigonometry cannot represent.
+
+### 7. Mock Topological Transition
+Demonstrates how Mock Topology allows continuous transitions between topologically distinct structures (like a torus and a sphere), with fluctuating Euler characteristics.
+
+### 8. Mock Field Equation
+Explores a wave equation with fluctuating wave speed, modeling media with time-varying physical properties and showcasing emergent phenomena like dynamic compression and expansion.
+
+### 9. Mock Network Evolution
+Models transportation networks with transitional congestion patterns, showing how graph structures can undergo topological phase transitions as edge weights fluctuate.
+
+### 10. Mock Quantum Measurement
+Captures transitional behaviors between quantum measurement events, with chaotic transitions between discrete eigenstates and fluctuating measurement probabilities.
+
+## Running the Simulations
+
+Each simulation can be run individually using Python:
+
+```bash
+python simulation1_mock_addition.py
+python simulation2_mock_multiplication.py
+# etc.
+```
+
+## Connections to Transition Numbers Theory
+
+These simulations extend principles from Transition Numbers Theory by:
+1. Demonstrating how numbers can transition between different mathematical states
+2. Modeling dynamic, state-dependent mathematical operations
+3. Capturing evolving mathematical structures as they fluctuate over time
+
+## Connections to Factorial Dynamics
+
+Several simulations incorporate concepts from Factorial Dynamics, particularly:
+1. Recursive growth patterns in the Mock Bifurcation simulation
+2. Multi-dimensional structures in the Mock Topology simulation
+3. Rate equations in the Mock Field Equation simulation
+
+## Research Applications
+
+These computational models provide a foundation for applying Mock Mathematics to:
+- Complex systems with fluctuating parameters
+- Quantum and chaotic systems
+- Network and transportation modeling
+- Machine learning and AI with transitional states
+- Physical systems with emergent properties
+
+Each simulation includes detailed analysis and visualizations to help understand the underlying mathematical principles.

@@ -3,54 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobalSushrut Project Documentation</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>GlobalSushrut Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 { color: #0066cc; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        ul { padding-left: 20px; }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="https://github.com/GlobalSushrut">GitHub</a>
-    </div>
-    
     <h1>GlobalSushrut Project Documentation</h1>
-    <p>Welcome to the public documentation for GlobalSushrut projects. Select a project below to view its documentation.</p>
+    <p>This site provides public access to documentation for GlobalSushrut projects.</p>
     
-    <div id="projects-container">
-        <!-- Project cards will be dynamically inserted here by JavaScript -->
-    </div>
-    
-    <script>
-        // This will be populated by our build script
-        const projects = [];
-        
-        function createProjectCards() {
-            const container = document.getElementById('projects-container');
-            
-            projects.forEach(project => {
-                const projectCard = document.createElement('div');
-                projectCard.className = 'project-card';
-                
-                const projectTitle = document.createElement('h2');
-                projectTitle.className = 'project-title';
-                projectTitle.textContent = project.name;
-                
-                const projectDesc = document.createElement('p');
-                projectDesc.textContent = project.description || 'No description available.';
-                
-                const projectLink = document.createElement('a');
-                projectLink.href = project.path;
-                projectLink.textContent = 'View Documentation';
-                
-                projectCard.appendChild(projectTitle);
-                projectCard.appendChild(projectDesc);
-                projectCard.appendChild(projectLink);
-                
-                container.appendChild(projectCard);
-            });
-        }
-        
-        document.addEventListener('DOMContentLoaded', createProjectCards);
-    </script>
-    <script src="assets/js/projects.js"></script>
-</body>
-</html>
+    <h2>Projects</h2>
+    <ul>
+<li><a href="projects/advanced-physics-engine/index.html">advanced-physics-engine</a></li>
+<li><a href="projects/AGI-GitHub-Release/index.html">AGI-GitHub-Release</a></li>
+<li><a href="projects/AirOmega-Quantum-Framework/index.html">AirOmega-Quantum-Framework</a></li>
+<li><a href="projects/backend-integrator/index.html">backend-integrator</a></li>
+<li><a href="projects/bidding-app/index.html">bidding-app</a></li>
+<li><a href="projects/decentralized-storage/index.html">decentralized-storage</a></li>
+<li><a href="projects/DGLA-governance-pipeline/index.html">DGLA-governance-pipeline</a></li>
+<li><a href="projects/drug-ACC/index.html">drug-ACC</a></li>
+<li><a href="projects/entroos/index.html">entroos</a></li>
+<li><a href="projects/FactorialGraphDB/index.html">FactorialGraphDB</a></li>
+<li><a href="projects/flag-mesh-system/index.html">flag-mesh-system</a></li>
+<li><a href="projects/general-ai-agent/index.html">general-ai-agent</a></li>
+<li><a href="projects/hologram-space/index.html">hologram-space</a></li>
+<li><a href="projects/hospital-management-system-blockchain/index.html">hospital-management-system-blockchain</a></li>
+<li><a href="projects/jcachenetdl/index.html">jcachenetdl</a></li>
+<li><a href="projects/magneto-diodic-chip-simulation/index.html">magneto-diodic-chip-simulation</a></li>
+<li><a href="projects/metadata-authorship-system/index.html">metadata-authorship-system</a></li>
+<li><a href="projects/Metaverse_blockchain/index.html">Metaverse_blockchain</a></li>
+<li><a href="projects/mmci-pte/index.html">mmci-pte</a></li>
+<li><a href="projects/mockgraph-edgenet/index.html">mockgraph-edgenet</a></li>
+<li><a href="projects/mock-mathematics-research/index.html">mock-mathematics-research</a></li>
+<li><a href="projects/mockphy-engine/index.html">mockphy-engine</a></li>
+<li><a href="projects/physics-engine-docs/index.html">physics-engine-docs</a></li>
+<li><a href="projects/quantum-intent-engine/index.html">quantum-intent-engine</a></li>
+<li><a href="projects/recursive-cosmogenesis/index.html">recursive-cosmogenesis</a></li>
+<li><a href="projects/redise-v2-diagnostic-engine/index.html">redise-v2-diagnostic-engine</a></li>
+<li><a href="projects/rna-splicing-prediction/index.html">rna-splicing-prediction</a></li>
+<li><a href="projects/secure-financial-data-aggregator/index.html">secure-financial-data-aggregator</a></li>
+<li><a href="projects/UFEC-Q-quantum/index.html">UFEC-Q-quantum</a></li>
+<li><a href="projects/unrealnet-project/index.html">unrealnet-project</a></li>
+<li><a href="projects/Womb-AGI-FRNET-v0.0001/index.html">Womb-AGI-FRNET-v0.0001</a></li>
+<li><a href="projects/wrapper-infrastructure/index.html">wrapper-infrastructure</a></li>
+<li><a href="projects/zk-hospital-management-system/index.html">zk-hospital-management-system</a></li>
+</ul></body></html>

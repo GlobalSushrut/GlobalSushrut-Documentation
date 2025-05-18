@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGI-GitHub-Release Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 { color: #0066cc; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .file-list { padding-left: 20px; }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="../../index.html">← Back to Projects</a></p>
+    <h1>AGI-GitHub-Release Documentation</h1>
+    <p>Documentation files available in this project:</p>
+    <ul class="file-list">
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/app_logs.md">app_logs</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/ASI_CAPABILITIES.md">ASI_CAPABILITIES</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/DEVELOPER_README.md">DEVELOPER_README</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/docs/api_reference.md">api_reference</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/docs/getting_started.md">getting_started</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/examples/README.md">README</a></li>
+<h2>README Contents:</h2>
+<pre>
+# AGI-GitHub-Release - README
+
+*This documentation is from the private repository AGI-GitHub-Release.*
+
+---
+
+# AGI Toolkit Example Applications
+
+This directory contains example applications demonstrating how to use the AGI Toolkit in real-world scenarios. These examples show how you can build powerful applications on top of ASI and MOCK-LLM components without modifying the core implementation code.
+
+## Available Examples
+
+### Text Analysis Application
+
+A comprehensive text analysis tool that demonstrates:
+- Sentiment analysis with MOCK-LLM
+- Advanced text processing with ASI
+- Data persistence using the unified memory system
+- Command-line interface for seamless interaction
+
+**Usage:**
+
+```bash
+cd text_analysis
+python app.py --analyze "This is a sample text to analyze"
+```
+
+Or use the interactive mode:
+
+```bash
+cd text_analysis
+python app.py
+```
+
+### Simple Chatbot
+
+A conversational AI application that shows:
+- How to build a chat interface
+- Maintaining conversation context
+- Leveraging both ASI and MOCK-LLM capabilities
+- Graceful degradation when components are unavailable
+
+**Usage:**
+
+```bash
+cd simple_chatbot
+python chatbot.py
+```
+
+For non-interactive use:
+
+```bash
+cd simple_chatbot
+python chatbot.py --input "Tell me about quantum computing"
+```
+
+## Building Your Own Applications
+
+These examples are meant to serve as starting points for your own custom applications. Here are some tips for creating your own applications:
+
+1. **Start with the simplified API**: The `AGIAPI` class provides a high-level interface that abstracts away the implementation details.
+
+2. **Handle component availability**: Always check for component availability using `api.has_asi` and `api.has_mock_llm` before using specific functionality.
+
+3. **Use error handling**: Implement proper error handling to create resilient applications.
+
+4. **Leverage the unified memory**: Use the memory system for maintaining state across sessions.
+
+## Additional Resources
+
+- [API Reference](../docs/api_reference.md): Detailed documentation of all available classes and methods
+- [Getting Started Guide](../docs/getting_started.md): Quick introduction to the AGI Toolkit
+- [Main README](../README.md): Overview of the entire project
+
+## Contributing New Examples
+
+We welcome contributions of new example applications! If you have developed an interesting application using the AGI Toolkit, please consider contributing it back to the community.
+
+To contribute:
+
+1. Create a new directory under `examples/`
+2. Include a README.md explaining what your example does
+3. Ensure your code is well-documented and follows best practices
+4. Submit a pull request to the main repository
+</pre>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/infra/licensing/README.md">README</a></li>
+<h2>README Contents:</h2>
+<pre>
+# AGI-GitHub-Release - README
+
+*This documentation is from the private repository AGI-GitHub-Release.*
+
+---
+
+# Mock Root ZK Entropy Licensing Protocol (MR-ZKELP)
+
+## What This Solves
+
+This licensing system implements Umesh's open+commercial licensing model:
+
+- **100% Free for Open Source**: Anyone can build/test/develop with the AGI toolkit
+- **License Required for Corporate**: Automatic detection of enterprise/production usage
+- **You Control Who Gets Licenses**: Only you can generate valid license hashes
+
+## How It Works
+
+1. The system monitors usage metrics and environment signals
+2. Development/open-source use is automatically permitted
+3. Corporate/production usage is detected and requires a license you provide
+4. Mathematical proof ensures they can't bypass the validation
+
+---
+
+## Directory Contents
+
+- **license_validator.py**: Import in any app to enforce the licensing model
+- **license_generator.py**: CLI tool for generating commercial license hashes (for you only)
+
+---
+
+## Usage
+
+### 1. Validate License in Your App
+
+```python
+from infra.licensing.license_validator import validate_license
+
+activity_metrics = [api_calls, active_users, memory_usage]
+result, msg = validate_license(activity_metrics, license_key=provided_key, client_id="client@example.com", secret="YourSecretSalt")
+if not result:
+    print(msg)
+    exit(1)
+```
+- If usage is below the threshold, runs free.
+- If above, requires a valid license hash (which only you can issue).
+
+#### ⚡ How to Run Your App with Licensing
+
+Always run from the project root with PYTHONPATH set:
+
+```bash
+PYTHONPATH=. python3 real_world_apps/banking/app.py ...
+```
+
+If you see an import error for 'infra', this is the fix.
+
+### 2. Generate a License Hash
+
+```shell
+python3 license_generator.py --client-id client@example.com --secret YourSecretSalt
+```
+- Output is a license hash for that client.
+- Share only with paid/commercial users.
+
+---
+
+## How It Works
+- **Mock Root + ZK Entropy**: Scrambles usage metrics so thresholds can't be easily faked.
+- **License Hash**: SHA-512 of (secret + client_id). Only you know the secret.
+- **Easy to integrate**: Add to any Python app.
+
+---
+
+## Future Extensions
+- ZK Proof-based validation
+- Pay-as-you-go metering
+- Multiple license levels (change the threshold)
+
+---
+
+**Invented by Umesh, implemented by Cascade AI.**
+</pre>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/logs/summary_report.md">summary_report</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/AGI-GitHub-Release/viewer.md">viewer</a></li>
+</ul></body></html>

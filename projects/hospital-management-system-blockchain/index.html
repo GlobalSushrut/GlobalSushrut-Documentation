@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hospital-management-system-blockchain Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 { color: #0066cc; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .file-list { padding-left: 20px; }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="../../index.html">← Back to Projects</a></p>
+    <h1>hospital-management-system-blockchain Documentation</h1>
+    <p>Documentation files available in this project:</p>
+    <ul class="file-list">
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/cloud-deployment/README.md">README</a></li>
+<h2>README Contents:</h2>
+<pre>
+# hospital-management-system-blockchain - README
+
+*This documentation is from the private repository hospital-management-system-blockchain.*
+
+---
+
+# Hospital Management System - Cloud Deployment Guide
+
+This guide provides instructions for validating and deploying the Hospital Management System to your cloud environment of choice. The system includes frontend components, backend APIs, and blockchain integration, all designed to work together seamlessly.
+
+## System Components
+
+The Hospital Management System consists of:
+
+1. **Frontend**: React-based UI with enhanced components:
+   - BlockchainMarketplace with tabs for Medical Products, Pharmacy Products, Lab Tests, and Doctors
+   - DoctorProfile with advanced telemedicine capabilities
+   - MedicalRecordsViewer with blockchain verification
+   - DicomViewerPage for medical imaging
+
+2. **Backend**: API services with routes for:
+   - TenantUsageLog management
+   - TenantInvoice processing
+   - BlockchainNode provisioning and management
+   - RustSecureDatabase integration
+
+3. **Blockchain**: Ethereum-based nodes for secure medical record management
+   - Multi-node configuration for high availability
+   - Security monitoring for compliance
+   - Smart contracts for medical records and prescriptions
+
+## Pre-Deployment Validation
+
+Before deploying to the cloud, you should validate that all system components are ready:
+
+```bash
+# Navigate to the validation scripts directory
+cd validation-scripts
+
+# Run the main validation script
+./run-all-validations.sh
+```
+
+The validation checks:
+- Frontend components and their features
+- Backend API endpoints and authentication mechanisms
+- Blockchain node configuration and connectivity
+- Kubernetes deployment files
+
+## Cloud Deployment
+
+The deployment process automates the setup of your Hospital Management System in the cloud:
+
+```bash
+# Navigate to the cloud deployment directory
+cd cloud-deployment
+
+# Make the deployment script executable
+chmod +x deploy.sh
+
+# Run the deployment script
+./deploy.sh
+```
+
+The deployment script will:
+1. Run validation checks to ensure system readiness
+2. Configure cloud provider credentials
+3. Set up or connect to a Kubernetes cluster
+4. Update Kubernetes configuration files with appropriate image references
+5. Deploy all components in the correct order
+6. Provide access information for the deployed services
+
+## Supported Cloud Providers
+
+The deployment script supports multiple cloud providers:
+- Amazon Web Services (AWS)
+- Google Cloud Platform (GCP)
+- Microsoft Azure
+- DigitalOcean
+- Custom providers (with manual configuration)
+
+## Real-Time Development Mode
+
+The deployment includes an option to set up real-time development, allowing you to:
+- Make code changes locally
+- See changes reflected in the cloud environment immediately
+- Debug and test without redeploying the entire system
+
+To use this feature, select the real-time development option during deployment, or run:
+
+```bash
+skaffold dev
+```
+
+## Post-Deployment Verification
+
+After deployment, verify that all components are working correctly:
+
+1. Access the frontend URL provided in the deployment output
+2. Verify that you can log in and access all features
+3. Test the marketplace functionality
+4. Verify telemedicine capabilities
+5. Test blockchain integration for medical records
+
+## Troubleshooting
+
+If you encounter issues during deployment:
+
+1. Check the deployment logs in `cloud-deployment/logs/`
+2. Verify Kubernetes pod status with `kubectl get pods -n hospital-system`
+3. View pod logs with `kubectl logs -f &lt;pod-name&gt; -n hospital-system`
+4. Run the validation scripts again to identify specific issues
+
+## Security Considerations
+
+The Hospital Management System is designed with security in mind:
+- JWT authentication for API access
+- Multi-tenant isolation for data security
+- Blockchain verification for medical records
+- Secure container configurations
+- Resource limits and constraints
+
+## Need Help?
+
+If you need assistance with deployment or encounter any issues, refer to the access-info.txt file generated during deployment for detailed information about your setup.
+</pre>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/DEPLOYMENT.md">DEPLOYMENT</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/DEVELOPER_MODE.md">DEVELOPER_MODE</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/devmode.md">devmode</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/docs/architecture/file_structure.md">file_structure</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/docs/architecture/system_overview.md">system_overview</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/docs/README.md">README</a></li>
+<h2>README Contents:</h2>
+<pre>
+# hospital-management-system-blockchain - README
+
+*This documentation is from the private repository hospital-management-system-blockchain.*
+
+---
+
+# Hospital Management System Documentation
+
+Welcome to the comprehensive documentation for the Hospital Management System. This documentation provides detailed information about the system architecture, APIs, development setup, deployment instructions, and user guides.
+
+## Documentation Structure
+
+### Architecture
+- [System Overview](architecture/system_overview.md) - High-level overview of the system architecture and components
+- [File Structure](architecture/file_structure.md) - Detailed description of the project directory structure
+
+### API Documentation
+- [KYC Verification API](api/kyc.md) - Documentation for the KYC verification endpoints
+
+### Development
+- [Setup Guide](development/setup.md) - Instructions for setting up the development environment
+
+### Blockchain
+- [Integration Guide](blockchain/integration.md) - Documentation for blockchain integration
+
+### Deployment
+- [AWS Deployment Guide](deployment/aws.md) - Instructions for deploying the system on AWS
+
+### User Guides
+- [Patient Guide](user-guides/patient.md) - Guide for patients using the system
+
+## Getting Started
+
+If you're new to the project, we recommend starting with:
+
+1. [System Overview](architecture/system_overview.md) to understand the architecture
+2. [File Structure](architecture/file_structure.md) to understand the codebase organization
+3. [Setup Guide](development/setup.md) to set up your development environment
+
+## Contributing to Documentation
+
+When contributing to this documentation:
+
+1. Follow the established Markdown formatting pattern
+2. Use clear, concise language
+3. Include code examples where applicable
+4. Add diagrams for complex concepts
+5. Test all links and code snippets
+
+## Documentation To-Do List
+
+- [ ] Create admin user guide
+- [ ] Create doctor user guide
+- [ ] Add additional API documentation for medical records
+- [ ] Add additional API documentation for appointment scheduling
+- [ ] Add Azure and Google Cloud deployment guides
+- [ ] Create security best practices guide
+- [ ] Add system architecture diagrams
+
+## Support
+
+If you have questions about the documentation or encounter issues with the system:
+
+- Submit an issue in the project repository
+- Contact the development team at dev-support@example.com
+</pre>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/docs/TelemedicineInsuranceFlow.md">TelemedicineInsuranceFlow</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/docs/VideoConferencingTestGuide.md">VideoConferencingTestGuide</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/documentation.md">documentation</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/FINALIZE.md">FINALIZE</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/flask-backend/app/payment/README.md">README</a></li>
+<h2>README Contents:</h2>
+<pre>
+# hospital-management-system-blockchain - README
+
+*This documentation is from the private repository hospital-management-system-blockchain.*
+
+---
+
+# Payment Module
+
+This module handles all payment-related functionality for the Hospital Management System, including processing payments for medical products, pharmacy products, lab tests, and doctor appointments.
+
+## Features
+
+### Cart Management
+- Add items to cart (medical products, pharmacy products, lab tests)
+- View cart contents
+- Update item quantities
+- Remove items from cart
+- Clear cart
+
+### Payment Processing
+- Create payment intents using Stripe
+- Process payments for different product types
+- Handle payment success and failure events
+- Maintain payment and order records
+
+### Lab Appointments
+- Schedule lab appointments
+- View appointment details
+- Update appointment information
+- Cancel appointments
+- Support for home collection
+
+## API Endpoints
+
+### Cart Management
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/payment/cart` | GET | Get user's cart contents |
+| `/api/payment/cart/add` | POST | Add item to cart |
+| `/api/payment/cart/remove/&lt;item_id&gt;` | DELETE | Remove item from cart |
+| `/api/payment/cart/update/&lt;item_id&gt;` | PUT | Update item quantity |
+| `/api/payment/cart/clear` | DELETE | Clear all items from cart |
+
+### Payment Processing
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/payment/create-intent` | POST | Create a payment intent |
+| `/api/payment/webhook` | POST | Handle Stripe webhook events |
+
+### Lab Appointments
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/payment/lab-appointments` | GET | Get user's lab appointments |
+| `/api/payment/lab-appointments` | POST | Schedule a new lab appointment |
+| `/api/payment/lab-appointments/&lt;appointment_id&gt;` | GET | Get appointment details |
+| `/api/payment/lab-appointments/&lt;appointment_id&gt;` | PUT | Update appointment details |
+| `/api/payment/lab-appointments/&lt;appointment_id&gt;/cancel` | POST | Cancel an appointment |
+
+## Models
+
+### Cart and Cart Items
+- **Cart**: Represents a user's shopping cart
+- **CartItem**: Individual items in the cart with type, quantity, and price
+
+### Payment and Invoices
+- **Payment**: Records payment transactions with status and metadata
+- **Invoice**: Detailed invoice information for completed payments
+- **PaymentMethod**: Saved payment methods for users
+
+### Lab Appointments
+- **LabAppointment**: Details of lab test appointments including scheduling, status, and results
+
+## Setup
+
+### Environment Variables
+The payment module requires the following environment variables:
+- `STRIPE_API_KEY`: Your Stripe secret API key
+- `STRIPE_WEBHOOK_SECRET`: Webhook signing secret from Stripe
+- `STRIPE_PUBLIC_KEY`: Public key for client-side integration
+
+### Stripe Integration
+This module uses Stripe for payment processing. Make sure to:
+1. Create a Stripe account
+2. Set up webhook endpoints in your Stripe dashboard
+3. Configure the proper Stripe API keys in your environment
+
+## Testing
+
+Run the tests for this module with:
+```bash
+python -m unittest tests/test_payment_endpoints.py
+```
+</pre>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/DEPLOYMENT_CHECKLIST.md">DEPLOYMENT_CHECKLIST</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/docs/blockchain-deployment-guide.md">blockchain-deployment-guide</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/docs/MediChainIntegration.md">MediChainIntegration</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/docs/TelemedicineInsuranceIntegration.md">TelemedicineInsuranceIntegration</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/docs/WalkinPatientFeature.md">WalkinPatientFeature</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/IMPROVEMENT.md">IMPROVEMENT</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/README.md">README</a></li>
+<h2>README Contents:</h2>
+<pre>
+# hospital-management-system-blockchain - README
+
+*This documentation is from the private repository hospital-management-system-blockchain.*
+
+---
+
+
+# Project Overview
+
+This repository contains the implementation of a decentralized hospital management system utilizing blockchain technology. The system ensures secure storage of patient records, appointments, prescriptions, and invoices within individual user blocks. The application is built using **Flask** as the backend framework and **React** for the frontend, with additional integrations for email verification, video conferencing, real-time chat, and payment processing.
+
+## Features & Integrations
+
+### 1. **Email & OTP Authentication**
+
+* The system uses **Mailtrap** for email-based OTP verification.
+* You must generate your own API keys from Mailtrap (free) and add them to the `app.py` file.
+
+### 2. **Video Conferencing (Jitsi Meet)**
+
+* Jitsi Meet is integrated for secure video conferencing.
+* The setup requires multi-server support and successful integration.
+* Obtain your own Jitsi Meet API keys and configure them accordingly.
+
+### 3. **Chat Module**
+
+* Real-time chat messages are stored locally in memory.
+* Chat history is maintained within the running Flask terminal.
+
+### 4. **Payment Processing (Stripe)**
+
+* Stripe payment processing is integrated.
+* The routes are successfully triggered.
+* After registering a business and linking a bank account, proper Stripe APIs will be incorporated into the existing functions in `app.py` (Stripe section).
+
+### 5. **Blockchain-Based Data Storage**
+
+* The system employs a **JSON-based blockchain** as a decentralized database.
+* Each registered user has a dedicated block that securely stores:
+  * Appointments
+  * Bookings
+  * Prescriptions
+  * Invoices
+
+## Installation & Setup
+
+### **1. Clone the Repository**
+
+```bash
+  git clone https://github.com/usmannaveed-19/Hopital-Management-System-master
+  cd Hopital-Management-System-master
+```
+
+### **2. Install Backend Dependencies (Flask)**
+
+* Ensure you have **Python** installed.
+* All required backend libraries are listed in `requirements.txt`.
+* Install dependencies by running:
+
+```bash
+  pip install -r requirements.txt
+```
+
+### **3. Install Frontend Dependencies (React)**
+
+* Navigate to the frontend directory:
+
+```bash
+  cd frontend
+```
+
+* Install required packages:
+
+```bash
+  npm install
+```
+
+### **4. Environment Configuration**
+
+* Generate your API keys for  **Mailtrap, Jitsi Meet, and Stripe** .
+* Add them to the appropriate sections in `app.py`.
+
+### **5. Running the Application**
+
+To start the project, run the following two terminals simultaneously:
+
+#### **Start the Flask Backend**
+
+```bash
+  python app.py
+```
+
+#### **Start the React Frontend**
+
+```bash
+  cd frontend
+  npm start
+```
+
+Once both servers are running, the project will be fully operational.
+
+## Project Structure
+
+```
+Hopital-Management-System-master/
+│── backend/                   # Flask application
+│   ├── app.py                 # Main backend application
+│   ├── blockchain.json        # JSON-based blockchain storage
+│   ├── requirements.txt       # Python dependencies
+│── frontend/                  # React application
+│   ├── src/
+│   ├── package.json           # Frontend dependencies
+│   ├── public/
+│── README.md                  # Project documentation
+```
+
+## Contribution & Support
+
+* Ensure all integrations work correctly before submitting pull requests.
+* For issues, please open a **GitHub issue** with detailed information.
+* Contributions to improve functionality or optimize performance are welcome.
+
+## License
+
+This project is open-source and available under the  **MIT License** .
+
+---
+
+For further inquiries or contributions, feel free to connect with the repository maintainers.
+</pre>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/UI_IMPLEMENTATION_CHECKLIST.md">UI_IMPLEMENTATION_CHECKLIST</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/hospital-management-system-master/UI_IMPROVEMENT_PLAN.md">UI_IMPROVEMENT_PLAN</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/integration-tests/README.md">README</a></li>
+<h2>README Contents:</h2>
+<pre>
+# hospital-management-system-blockchain - README
+
+*This documentation is from the private repository hospital-management-system-blockchain.*
+
+---
+
+# Hospital Management System - Integration Tests
+
+This directory contains comprehensive integration tests and validation tools for the Hospital Management System. These tests ensure that all components of the system (frontend, backend, and blockchain) work together seamlessly without contradictions.
+
+## Overview
+
+The integration tests verify:
+
+1. **System-wide Integration**: Testing complete user journeys across frontend, backend, and blockchain
+2. **Blockchain Integration**: Verifying that frontend and backend blockchain services interact correctly with the smart contract
+3. **System Validation**: Checking for overall system consistency, including UI, API endpoints, and data flow
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (v14+)
+- npm (v6+)
+- Running backend server (Flask)
+- Running frontend server (React)
+- Accessible blockchain node (local or testnet)
+
+### Installation
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create environment configuration:
+
+```bash
+cp .env.example .env
+```
+
+3. Configure your environment variables in `.env`:
+   - Set appropriate URLs for services
+   - Configure blockchain private keys for testing
+   - Set test user credentials
+
+## Running Tests
+
+### All Tests
+
+To run all integration tests at once:
+
+```bash
+npm run test:all
+```
+
+### Individual Test Suites
+
+You can run specific test suites:
+
+1. **System Integration Tests**:
+   Tests complete user journeys and main system functionality:
+
+```bash
+npm run test
+```
+
+2. **Blockchain Integration Tests**:
+   Verifies blockchain functionality across frontend and backend:
+
+```bash
+npm run test:blockchain
+```
+
+3. **System Validation**:
+   Performs comprehensive system validation for consistency:
+
+```bash
+npm run test:system
+```
+
+## Test Description
+
+### System Integration Test (`system-integration-test.js`)
+
+These tests verify end-to-end functionality including:
+- User registration and authentication
+- KYC verification workflow
+- Medical record creation and retrieval
+- Doctor authorization process
+
+### Blockchain Integration Test (`blockchain-integration-test.js`)
+
+These tests focus on blockchain functionality:
+- Backend health and status checks
+- Direct smart contract interaction verification
+- Alignment between frontend and backend blockchain services
+- Data consistency between backend APIs and blockchain
+
+### System Validation (`system-validation.js`)
+
+This validation tool checks for:
+- Backend API consistency and availability
+- UI consistency across different dashboards
+- Proper blockchain contract integration
+- File structure and code organization
+- System health and status
+
+## Troubleshooting
+
+If tests fail, check the following:
+
+1. **Connection Issues**:
+   - Ensure all services are running (backend, frontend, blockchain)
+   - Verify URLs in `.env` file are correct
+   - Check network connectivity between services
+
+2. **Authentication Issues**:
+   - Verify test user credentials in `.env` are correct
+   - Check JWT token handling in both frontend and backend
+
+3. **Blockchain Issues**:
+   - Verify contract address is correct
+   - Ensure account has sufficient funds for transactions
+   - Check blockchain node connectivity
+
+## Customizing Tests
+
+You can customize test behavior by modifying environment variables:
+
+- `TEST_TIMEOUT_MS`: Adjust timeout for long-running tests
+- `SKIP_SERVICE_START`: Skip automatic service startup
+- `BLOCKCHAIN_TEST_ONLY`: Run only blockchain tests
+- `BACKEND_TEST_ONLY`: Run only backend tests
+
+## Logging and Results
+
+Test logs and results are stored in:
+
+- `integration-tests.log`: Detailed test execution logs
+- `./test-results`: Test result summaries and reports
+
+## Achieving 100% Accuracy
+
+To ensure the system operates with 100% accuracy:
+
+1. Run all tests and address any failures
+2. Verify system validation passes without issues
+3. Check for consistent UI elements across all dashboards
+4. Ensure consistent error handling throughout the system
+5. Verify consistent data representation between frontend, backend, and blockchain
+
+When all tests pass successfully, you can be confident that the Hospital Management System is functioning with complete accuracy and without contradictions.
+</pre>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/medical-chain/README.md">README</a></li>
+<h2>README Contents:</h2>
+<pre>
+# hospital-management-system-blockchain - README
+
+*This documentation is from the private repository hospital-management-system-blockchain.*
+
+---
+
+# Medical Chain - Polygon Sidechain
+
+This is a Polygon sidechain implementation for storing medical records securely.
+
+## Prerequisites
+
+- Docker
+- Docker Compose
+
+## Setup Instructions
+
+1. Start the validators:
+```bash
+docker-compose up -d
+```
+
+2. Check the status:
+```bash
+docker-compose ps
+```
+
+3. View logs:
+```bash
+docker-compose logs -f
+```
+
+## Network Details
+
+- Chain ID: 100
+- RPC Endpoints:
+  - Validator 1: http://localhost:8545
+  - Validator 2: http://localhost:8546
+  - Validator 3: http://localhost:8547
+
+## Smart Contract Deployment
+
+After the network is running, you can deploy smart contracts using:
+- Web3.js
+- Ethers.js
+- Hardhat
+- Truffle
+
+Make sure to use the local RPC endpoint (http://localhost:8545) as your provider.
+
+## Security Notes
+
+This is a private sidechain for medical records. Ensure:
+1. Proper access control in smart contracts
+2. Encrypted data storage
+3. Regular backups
+4. Monitoring of validator nodes
+</pre>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/MediChain-System-Architecture.md">MediChain-System-Architecture</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/README-lightweight.md">README-lightweight</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/testing.md">testing</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/test.md">test</a></li>
+<li><a href="https://github.com/GlobalSushrut/GlobalSushrut-Documentation/blob/master/projects/hospital-management-system-blockchain/test-results/test-summary-report.md">test-summary-report</a></li>
+</ul></body></html>
